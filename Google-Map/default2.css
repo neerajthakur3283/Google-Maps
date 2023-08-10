@@ -1,0 +1,532 @@
+#my-widget {
+    width: 100%;
+    margin: 0 auto;
+    padding: 8px;
+    float: left;
+}
+
+h6 {
+    font-size: 16px;
+    margin: 0 0 1% 0;
+}
+
+.product-type {
+    width: 99%;
+}
+
+.horizontal-row {
+    display: flex;
+    max-width: 800px;
+}
+
+.product-type-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    width: 50%;
+}
+
+.point {
+    font-size: 18px;
+    color: #39a5b4;
+    border-bottom: 3px solid #39a5b4;
+    width: 46px;
+    font-family: system-ui;
+    font-weight: 700;
+}
+
+.postcode-b, .postcode-a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+    .postcode-b p,
+    .postcode-a p {
+        margin: 10px 0px 5px 2px;
+    }
+
+.postcode-input input {
+    font-size: 17px;
+    height: 34px;
+    padding-left: 3%;
+    width: 250px;
+    border-radius: 3px;
+    border: 2px solid #ccc;
+    background: #f4f5f5;
+    margin: 4px 0px 0 0;
+}
+
+.product-type-tab-content {
+    width: 100%;
+    height: 0px;
+}
+
+.product-type-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-type-nav {
+    display: flex;
+}
+
+.point-nav, .nni-nav {
+    font-size: 18px;
+    color: #39a5b4;
+    width: 80px;
+    font-family: system-ui;
+    font-weight: 700;
+    background: #f4f5f5;
+    cursor: pointer;
+    text-align: center;
+}
+
+.tab-nni {
+    width: 250px;
+    margin: 32px 0 0 0;
+}
+
+.tab-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+    .tab-content div {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+.selectize-control.single .selectize-input,
+.selectize-control.single .selectize-input input {
+    cursor: pointer;
+    background: rgb(57 165 180 / 20%);
+    height: 42px;
+    font-size: 17px;
+}
+
+.selectize-control {
+    width: 265px;
+}
+
+.selectize-dropdown-content {
+    font-size: 17px;
+}
+
+.port,
+.bandwidth,
+.term {
+    margin-right: 5%;
+    width: 100%;
+}
+
+    .port select, .bandwidth select, .term select {
+        padding-left: 3%;
+        border: 2px solid #ccc;
+        box-sizing: border-box;
+        height: 40px;
+        background: rgb(57 165 180 / 20%);
+        width: 200px;
+        border-radius: 3px;
+        margin: 2% 0 0 0px;
+        color: #303030;
+        font-size: 17px;
+        line-height: 18px;
+    }
+
+hr {
+    max-width: 800px;
+}
+
+form button[type="submit"] {
+    background-color: #cf7938;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 1% 0px 0px 0px;
+}
+
+.error {
+    color: red;
+    margin: 0 1% 0 0;
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: none;
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    border-top-color: #3498db;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.error-message {
+    color: red;
+    font-weight: 200;
+    font-family: cursive;
+}
+/* 
+.slider {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.slider .owl-item.active.center .slider-card {
+  transform: scale(1.15);
+  opacity: 1;
+  background: #ff9966;
+  background: -webkit-linear-gradient(to bottom, #ff5e62, #ff9966);
+  background: linear-gradient(to bottom, #ff5e62, #ff9966);
+  color: #fff;
+}
+
+.slider-card {
+  background: #fff;
+  padding: 0px 0px;
+  margin: 50px 15px 90px 15px;
+  border-radius: 5px;
+  box-shadow: 0 15px 45px -20px rgb(0 0 0 / 73%);
+  transform: scale(0.9);
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.slider-card img {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.owl-nav .owl-prev {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: 0;
+  opacity: 1;
+  font-size: 30px !important;
+  z-index: 1;
+}
+
+.owl-nav .owl-next {
+  position: absolute;
+  top: calc(50% - 25px);
+  right: 0;
+  opacity: 1;
+  font-size: 30px !important;
+  z-index: 1;
+}
+
+.owl-dots {
+  text-align: center;
+}
+
+.owl-dots .owl-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  background: #ccc !important;
+  margin-left: 3px;
+  margin-right: 3px;
+  outline: none;
+}
+
+.owl-dots .owl-dot.active {
+  background: #f44336 !important;
+}
+
+.card-body {
+  border: 2px solid #cf7938;
+  border-radius: 3%;
+  height: 290px;
+  max-height: 300px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-title {
+  margin-bottom: 0.75rem;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card-text {
+  margin-bottom: 1px;
+  margin-top: 5%;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.price {
+  color: #39a5b4;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+i.fa.fa-chevron-left {
+  color: #cf7938;
+}
+
+i.fa.fa-chevron-right {
+  color: #cf7938;
+}
+
+.back-button {
+  background-color: #cf7938;
+  color: white;
+  padding: 8px 20px 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 10px 0px 0px 3px;
+  height: 40px;
+  font-weight: 600;
+}
+
+a.btn.text-white {
+  background-color: #55acee;
+  position: absolute;
+  bottom: 10px;
+}
+
+.quotesHeading h3 {
+  text-align: center;
+}
+
+.quotesHeading h4 {
+  text-align: center;
+} */
+
+.postcodeB-error, .postcodeA-error {
+    color: red;
+    font-weight: 200;
+    font-family: cursive;
+}
+
+.tab-nni h5 {
+    margin: 10px 0px 5px 2px;
+}
+
+.postcode-b .postcode-tooltip {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    color: cadetblue;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 50px 50px;
+}
+
+.postcode-b i:hover + .postcode-tooltip {
+    display: block;
+}
+
+.postcode-b i:hover {
+    color: #39a5b4;
+    cursor: pointer;
+}
+
+.postcode-a .postcode-tooltip {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    color: cadetblue;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 45px 40px;
+}
+
+.postcode-a i:hover + .postcode-tooltip {
+    display: block;
+}
+
+.postcode-a i:hover {
+    color: #39a5b4;
+    cursor: pointer;
+}
+
+.product-type-nav .active {
+    background-color: #d7edf0;
+    color: #39a5b4;
+    border-bottom: 3px solid #39a5b4;
+}
+
+.postcode-b i.fa-info-circle, .postcode-a i.fa-info-circle {
+    margin-left: 5px;
+}
+
+
+.slider {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+    .slider .owl-item.active.center .slider-card {
+        transform: scale(1.15);
+        opacity: 1;
+        background: #ff9966;
+        background: -webkit-linear-gradient(to bottom, #ff5e62, #ff9966);
+        background: linear-gradient(to bottom, #ff5e62, #ff9966);
+        color: #fff;
+    }
+
+.slider-card {
+    background: #fff;
+    padding: 0px 0px;
+    margin: 50px 15px 90px 15px;
+    border-radius: 5px;
+    box-shadow: 0 15px 45px -20px rgb(0 0 0 / 73%);
+    transform: scale(0.9);
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
+    .slider-card img {
+        border-radius: 5px 5px 0px 0px;
+    }
+
+.owl-nav .owl-prev {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: 0;
+    opacity: 1;
+    font-size: 30px !important;
+    z-index: 1;
+}
+
+.owl-nav .owl-next {
+    position: absolute;
+    top: calc(50% - 25px);
+    right: 0;
+    opacity: 1;
+    font-size: 30px !important;
+    z-index: 1;
+}
+
+
+.owl-stage-outer {
+    margin: 0 25px;
+}
+
+.owl-dots {
+    text-align: center;
+}
+
+    .owl-dots .owl-dot {
+        height: 10px;
+        width: 10px;
+        border-radius: 10px;
+        background: #ccc !important;
+        margin-left: 3px;
+        margin-right: 3px;
+        outline: none;
+    }
+
+        .owl-dots .owl-dot.active {
+            background: #f44336 !important;
+        }
+
+.card-body {
+    border: 2px solid #cf7938;
+    border-radius: 7px;
+    height: 530px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.card-title {
+    margin: 0 -10px 15px;
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    text-align: center;
+    border-bottom: 2px solid #cf7938;
+}
+
+.card-text {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.price {
+    color: #39a5b4;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+i.fa.fa-chevron-left {
+    color: #cf7938;
+}
+
+i.fa.fa-chevron-right {
+    color: #cf7938;
+}
+
+.back-button {
+    background-color: #cf7938;
+    color: white;
+    padding: 8px 20px 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px 0px 0px 3px;
+    height: 40px;
+}
+
+a.btn.text-white {
+    background-color: #55acee;
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.quotesHeading h3 {
+    text-align: center;
+}
+
+.quotesHeading h4 {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.owl-carousel .owl-item img {
+    width: 70%;
+    margin: 15px 0;
+}
