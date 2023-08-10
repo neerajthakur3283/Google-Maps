@@ -40,7 +40,7 @@ function neos_loadScriptsAfterJQuery($) {
 			$.getScript("https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.min.js"),
 			$.getScript("https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"),
 			$.getScript("https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"),
-			$.getScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyA6LQv49us3NUq1Lb0qAq3XPfXNuU-F9vo&libraries=places"),
+			$.getScript("https://maps.googleapis.com/maps/api/js?key=[yourapikey]&libraries=places"),
 			$.Deferred(function (deferred) {
 				$(deferred.resolve);
 			})
